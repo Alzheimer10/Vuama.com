@@ -10,11 +10,20 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::namespace('CustomerWeb')->group(function () {
+  Route::get('/','AppController@home')->name('home');
+  Route::get('/contact','AppController@contact')->name('contact');
+  Route::get('/about','AppController@about')->name('about');
+  Route::get('/howWork','AppController@howWork')->name('howWork');
+  Route::get('/help','AppController@help')->name('help');
+  Route::get('/privacy_policy','AppController@privacy_policy')->name('privacy_policy');
+  Route::get('/providers','AppController@providers')->name('providers');
+  Route::get('/jobs','AppController@jobs')->name('jobs');
+  Route::get('/offices','AppController@offices')->name('offices');
 });
 
+  Route::get('/my_account','AppController@offices')->name('my_account');
+  
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'AdminAuth\LoginController@login');
