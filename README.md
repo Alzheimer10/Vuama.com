@@ -1,10 +1,7 @@
 # Vuama.com
-###http://www.vuama.com/
+### http://www.vuama.com/
 
 ---
-## Installation
-First, pull in the package through Composer.
-
 ## Usage
 
 ### Step 1:
@@ -29,5 +26,6 @@ Migrate
 php artisan migrate --seed
 ```
 
-##Vendors
+---
+## Vendors
 - Kbwebs/MultiAuth
