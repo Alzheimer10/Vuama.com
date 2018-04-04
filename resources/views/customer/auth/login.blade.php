@@ -16,37 +16,36 @@
             border-radius: .25rem !important;
             border: 1px solid #ced4da !important;
         }
-      .login-or {
-        position: relative;
-        font-size: 18px;
-        color: #aaa;
-        margin-top: 10px;
-                margin-bottom: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-      .span-or {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: -2px;
-        margin-left: -25px;
-        background-color: #fff;
-        width: 50px;
-        text-align: center;
-      }
-      .hr-or {
-        background-color: #cdcdcd;
-        height: 1px;
-        margin-top: 0px !important;
-        margin-bottom: 0px !important;
-      }
-      .btn-app{
-        color: #fff;
-        background-color: #4b3f4a;
-        border-color: #4b3f4a;
-      }
-
+        .login-or {
+          position: relative;
+          font-size: 18px;
+          color: #aaa;
+          margin-top: 10px;
+                  margin-bottom: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        .span-or {
+          display: block;
+          position: absolute;
+          left: 50%;
+          top: -2px;
+          margin-left: -25px;
+          background-color: #fff;
+          width: 50px;
+          text-align: center;
+        }
+        .hr-or {
+          background-color: #cdcdcd;
+          height: 1px;
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+        }
+        .btn-app{
+          color: #fff;
+          background-color: #4b3f4a;
+          border-color: #4b3f4a;
+        }
         ::-webkit-input-placeholder { font-size: 1rem !important; } /* WebKit */
         ::-moz-placeholder { font-size: 1rem !important; } /* Firefox 19+ */
         ::placeholder { font-size: 1rem !important; }
