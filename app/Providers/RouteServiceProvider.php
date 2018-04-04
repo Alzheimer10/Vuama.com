@@ -76,7 +76,6 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::group([
             'middleware' => ['web', 'customer', 'auth:customer'],
-            'prefix' => 'customer',
             'as' => 'customer.',
             'namespace' => $this->namespace,
         ], function ($router) {

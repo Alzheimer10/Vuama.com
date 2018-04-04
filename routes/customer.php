@@ -10,3 +10,7 @@ Route::get('/home', function () {
     return view('customer.home');
 })->name('home');
 
+
+Route::get('f',function(){
+	return 0;
+});
