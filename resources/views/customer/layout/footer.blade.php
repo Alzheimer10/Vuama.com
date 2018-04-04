@@ -15,10 +15,10 @@
                     <div class="col-xs-12 col-sm-4">
                         <ul>
                             <li><h3 class="border__bottom mb-2">VuamaAPP</h3></li>
-                            @if(!Auth::check())
+                            @if(!Auth::guard('customer')->check())
                                 <li><a href="{{ route('register') }}">Registrarme</a></li>
                             @endif
-                            <li><a href="{{ route('my_account') }}">Mi Cuenta</a></li>
+                            <li><a href="{{ route('customer.my_account') }}">Mi Cuenta</a></li>
                             <li><a href="{{ route('providers') }}">Proveedores</a></li>
                             <li><a href="{{ route('privacy_policy') }}">Políticas de Privacidad</a></li>
                             <li><a href="{{ route('help') }}">Ayuda</a></li>

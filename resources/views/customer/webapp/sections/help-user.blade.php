@@ -1,11 +1,7 @@
-@extends('layouts.master-user')
+@extends('customer.layout.master')
 @section('title', 'Ayuda')
 
-@section('styles')
-@stop
-
 @section('content')
-
 <div class="page-content">
 	<div class="page-bar">
         <ul class="page-breadcrumb">
@@ -363,3 +359,4 @@
 	    </div>
 	</div>
 </div>
+@endsection

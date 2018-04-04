@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('customer.layout.master')
 @section('title', 'Perfil')
 
 @section('styles')
@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-8">
                     <div class="row">
-                        @forelse ($users as $user)
+{{--                         @forelse ($users as $user)
                             <div class="col-xs-6 col-md-4 col-lg-6 mb-5">
                                 <div class="row border-bottom">
                                     <div class="car-img col-3">
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                         @empty
-                        @endforelse
+                        @endforelse --}}
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
@@ -94,14 +94,14 @@
                     <hr>
                     <div class="row ml-1">              
                         <ul class="tags">
-                            @forelse($services as $service)
+{{--                             @forelse($services as $service)
                                 <li class="tag">
                                     <a href="#"><span class="name">{{ $service->name }}</span>
                                         <span class="extra">480</span>
                                     </a>
                                 </li>
                             @empty
-                            @endforelse
+                            @endforelse --}}
                         </ul>
                     </div>
                     <hr>

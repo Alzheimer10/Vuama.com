@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('customer.layout.master')
 @section('title', 'Mi cuenta')
 
 @section('styles')
