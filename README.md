@@ -1,6 +1,5 @@
-# Vuama.com 
-plataforma que permita la contratación de servicios, donde los pagos y negociaciones sean a través de esta plataforma, que vigile el comportamiento de ambos, de tal manera que si la reputación por mal servicio o pago es baja, se cancela la cuenta, también depurar a los oferentes de servicio, para garantizar en un mayor porcentaje la calidad y cumplimiendo del servicio. Asistir a los clientes para poder tener una mejor experiencia.
-http://www.vuama.com/
+# www.vuama.com
+Plataforma que permita la contratación de servicios, donde los pagos y negociaciones sean a través de esta plataforma, que vigile el comportamiento de ambos, de tal manera que si la reputación por mal servicio o pago es baja, se cancela la cuenta, también depurar a los oferentes de servicio, para garantizar en un mayor porcentaje la calidad y cumplimiendo del servicio. Asistir a los clientes para poder tener una mejor experiencia.
 
 ---
 ## Uso
