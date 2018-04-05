@@ -41,13 +41,13 @@
                             <!-- SIDEBAR USERPIC -->
                             <div class="profile-userpic text-center">
                             <!-- CHANGE AVATAR TAB -->
-                                <avatar-component img="{{ asset(Auth::user()->avatar) }}" class="rounded-circle"></avatar-component>
+                                <avatar-component img="{{ Auth::guard('customer')->user()->avatar }}" class="rounded-circle"></avatar-component>
                             <!-- END CHANGE AVATAR TAB -->
                             </div>
                             <!-- END SIDEBAR USERPIC -->
                             <!-- SIDEBAR USER TITLE -->
                             <div class="profile-usertitle">
-                                <h3 class="text-center text-capitalize"> {{ Auth::user()->name }} {{ Auth::user()->lastname }} </h3>
+                                <h3 class="text-center text-capitalize"> {{ Auth::guard('customer')->user()->name }} {{ Auth::guard('customer')->user()->lastname }} </h3>
                             </div>
                             <!-- END SIDEBAR USER TITLE -->
 

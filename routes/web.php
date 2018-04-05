@@ -11,15 +11,17 @@
 |
 */
 Route::namespace('CustomerWeb')->group(function () {
-  Route::get('/','AppController@home')->name('home');
-  Route::get('/contact','AppController@contact')->name('contact');
-  Route::get('/about','AppController@about')->name('about');
-  Route::get('/howWork','AppController@howWork')->name('howWork');
-  Route::get('/help','AppController@help')->name('help');
-  Route::get('/privacy_policy','AppController@privacy_policy')->name('privacy_policy');
-  Route::get('/providers','AppController@providers')->name('providers');
-  Route::get('/jobs','AppController@jobs')->name('jobs');
-  Route::get('/offices','AppController@offices')->name('offices');
+  Route::group(['middleware' => 'is.customer'], function(){
+    Route::get('/','AppController@home')->name('home');
+  });
+  Route::get('/contacto','AppController@contact')->name('contact');
+  Route::get('/nosotros','AppController@about')->name('about');
+  Route::get('/como_funciona','AppController@howWork')->name('howWork');
+  Route::get('/ayuda','AppController@help')->name('help');
+  Route::get('/politica_y_privacidad','AppController@privacy_policy')->name('privacy_policy');
+  Route::get('/proveedores','AppController@providers')->name('providers');
+  Route::get('/trabajo','AppController@jobs')->name('jobs');
+  Route::get('/oficinas','AppController@offices')->name('offices');
 });
 
   

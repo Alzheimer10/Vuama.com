@@ -1,55 +1,5 @@
-@extends('customer.layout.master')
-
+@extends('customer.layout.auth')
 @section('styles')
-    <style>
-        nav, footer{
-            display: none !important;
-        }
-        body{
-             background-image: url({{ asset('img/call-to-action-bg.jpg') }});
-             background-size: cover;
-             background-position: center;
-             background-repeat: no-repeat;
-        }
-        input.form-control{
-            padding: .8rem !important;
-            border-radius: .25rem !important;
-            border: 1px solid #ced4da !important;
-        }
-        .login-or {
-          position: relative;
-          font-size: 18px;
-          color: #aaa;
-          margin-top: 10px;
-                  margin-bottom: 10px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
-        .span-or {
-          display: block;
-          position: absolute;
-          left: 50%;
-          top: -2px;
-          margin-left: -25px;
-          background-color: #fff;
-          width: 50px;
-          text-align: center;
-        }
-        .hr-or {
-          background-color: #cdcdcd;
-          height: 1px;
-          margin-top: 0px !important;
-          margin-bottom: 0px !important;
-        }
-        .btn-app{
-          color: #fff;
-          background-color: #4b3f4a;
-          border-color: #4b3f4a;
-        }
-        ::-webkit-input-placeholder { font-size: 1rem !important; } /* WebKit */
-        ::-moz-placeholder { font-size: 1rem !important; } /* Firefox 19+ */
-        ::placeholder { font-size: 1rem !important; }
-    </style>
 @stop
 
 @section('content')
@@ -97,7 +47,7 @@
 
                     <div class="form-group row mb-0 mt-4">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary w-100 p-2 text-uppercase">
+                            <button type="submit" class="btn btn-app w-100 p-2 text-uppercase">
                                 Entrar
                             </button>
 

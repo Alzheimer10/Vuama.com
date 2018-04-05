@@ -1,54 +1,5 @@
-@extends('customer.layout.master')
+@extends('customer.layout.auth')
 @section('styles')
-    <style>
-        nav, footer{
-            display: none !important;
-        }
-        body{
-             background-image: url({{ asset('img/call-to-action-bg.jpg') }});
-             background-size: cover;
-             background-position: center;
-             background-repeat: no-repeat;
-        }
-        input.form-control{
-            padding: .8rem !important;
-            border-radius: .25rem !important;
-            border: 1px solid #ced4da !important;
-        }
-        .login-or {
-          position: relative;
-          font-size: 18px;
-          color: #aaa;
-          margin-top: 10px;
-                  margin-bottom: 10px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-        }
-        .span-or {
-          display: block;
-          position: absolute;
-          left: 50%;
-          top: -2px;
-          margin-left: -25px;
-          background-color: #fff;
-          width: 50px;
-          text-align: center;
-        }
-        .hr-or {
-          background-color: #cdcdcd;
-          height: 1px;
-          margin-top: 0px !important;
-          margin-bottom: 0px !important;
-        }
-        .btn-app{
-          color: #fff;
-          background-color: #4b3f4a;
-          border-color: #4b3f4a;
-        }
-        ::-webkit-input-placeholder { font-size: 1rem !important; } /* WebKit */
-        ::-moz-placeholder { font-size: 1rem !important; } /* Firefox 19+ */
-        ::placeholder { font-size: 1rem !important; }
-    </style>
 @stop
 @section('content')
 <div class="container pt-2 pb-2">
@@ -62,7 +13,7 @@
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                         <label for="name" class="control-label">Nombre</label>
 
-                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required="true" autofocus>
+                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required="true" autofocus placeholder="Nombre">
 
                         @if ($errors->has('name'))
                             <span class="help-block">
@@ -74,7 +25,7 @@
                     <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
                         <label for="lastname" class="control-label">Apellido</label>
 
-                        <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required="true" autofocus>
+                        <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required="true" placeholder="Apellido">
 
                         @if ($errors->has('lastname'))
                             <span class="help-block">
@@ -98,7 +49,7 @@
                     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                         <label for="password" class="control-label">Contraseña</label>
 
-                        <input id="password" type="password" class="form-control" required="true" name="password">
+                        <input id="password" type="password" class="form-control" required="true" name="password" placeholder="Contraseña">
 
                         @if ($errors->has('password'))
                             <span class="help-block">
@@ -110,7 +61,7 @@
                     <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                         <label for="password-confirm" class="control-label">Confirmar contraseña</label>
 
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
+                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Confirmar contraseña">
 
                         @if ($errors->has('password_confirmation'))
                             <span class="help-block">
@@ -119,7 +70,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group row mb-0">
+                    <div class="form-group row mb-0 mt-4">
                         <div class="col">
                             <button type="submit" class="btn btn-app d-block w-100 p-3">
                                 COMENZAR!

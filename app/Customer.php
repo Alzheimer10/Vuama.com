@@ -16,7 +16,14 @@ class Customer extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'lastname',
+        'email',
+        'password',
+        'description',
+        'avatar',
+        'status',
+        'gender'
     ];
 
     /**
@@ -37,5 +44,10 @@ class Customer extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CustomerResetPassword($token));
+    }
+
+    public function bank_accounts()
+    {
+        return $this->hasMany(bank_account::class);
     }
 }

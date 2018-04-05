@@ -13,7 +13,7 @@ class AppController extends Controller
 	public function home(){
 		if(!\Auth::guard('customer')->check())
 			return view($this->viewdir.'.website.home');
-		return view('customer.webapp.home')->with('services',[]);
+		return view('customer.webapp.home');
 	}
 
 	public function contact(){

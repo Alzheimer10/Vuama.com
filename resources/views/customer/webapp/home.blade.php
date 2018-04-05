@@ -52,16 +52,7 @@
 			        </div>
 					<hr>
 					<div class="row ml-1">				
-						<ul class="tags">
-{{-- 						    @forelse($services as $service)
-								<li class="tag">
-									<a href="#"><span class="name">{{ $service->name }}</span>
-										<span class="extra">480</span>
-									</a>
-								</li>
-				            @empty
-				            @endforelse --}}
-						</ul>
+						@component('customer.webapp.components.tagsServices')@endcomponent
 					</div>
 					<hr>
 				</div>

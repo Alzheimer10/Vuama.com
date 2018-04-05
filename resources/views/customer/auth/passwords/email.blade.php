@@ -1,45 +1,40 @@
 @extends('customer.layout.auth')
-
+@section('styles')
+@stop
 <!-- Main Content -->
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<div class="container pt-2 pb-2" style="height: 100vh">
+    <div class="row align-items-center h-100">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6 mx-auto">
+            <div class="card p-5">
+                <a href="{{ route('home') }}" class="mx-auto text-center"><img src="{{ asset('img/logo/logo.svg') }}" alt="logo_vuama" width="70%"></a>
+                @if (session('status'))
+                    <div class="alert alert-success">
+                        {{ session('status') }}
+                    </div>
+                @endif
 
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/customer/password/email') }}">
-                        {{ csrf_field() }}
+                <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
+                    {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <label for="email" class="control-label">Correo eléctronico</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo@mail.com">
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @endif
+                    </div>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Send Password Reset Link
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-app w-100 p-2 text-uppercase">
+                            Restablecer contraseña 
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

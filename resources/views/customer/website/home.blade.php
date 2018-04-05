@@ -142,10 +142,10 @@
                       <div class="container">
                           <div class="row">
                               <div class="col-6 text-center">
-                                  <a href="#"><img src="img/app/app_store.png" alt="img_app_store"  width="100%"></a>
+                                  <a href="#"><img src="{{ asset('img/app/app_store.png') }}" alt="img_app_store"  width="100%"></a>
                               </div>
                               <div class="col-6 text-center">
-                                  <a href="#"><img src="img/app/google_play.png" alt="img_google_play" width="100%"></a>
+                                  <a href="#"><img src="{{ asset('img/app/google_play.png') }}" alt="img_google_play" width="100%"></a>
                               </div>
                           </div>
                       </div>
@@ -153,7 +153,7 @@
               </div>
 
               <div class="col-xs-4 col-sm-6">
-                  <img class="advanced-feature-img-right wow fadeInRight" src="img/app/app.png" alt="img_app">
+                  <img class="advanced-feature-img-right wow fadeInRight" src="{{ asset('img/app/app.png') }}" alt="img_app">
               </div>
             </div>
 

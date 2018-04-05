@@ -20,4 +20,8 @@ class CustomerController extends Controller
 	public function directory(){
 		return view($this->viewdir.'.sections.directory');
 	}
+	
+	public function customer_type(){
+		return view('customer.auth.customertype');
+	}
 }
