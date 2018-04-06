@@ -1,11 +1,10 @@
-<h1>{{$count}}</h1>
 <ul class="tags">
-{{--     @forelse($ServicesProvider as $service)
+    @forelse($ServicesProvider as $service)
 		<li class="tag">
 			<a href="#"><span class="name">{{ $service->name }}</span>
 				<span class="extra">480</span>
 			</a>
 		</li>
     @empty
-    @endforelse --}}
+    @endforelse
 </ul>

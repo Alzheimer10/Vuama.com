@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'Api'], function(){
-	Route::get('/projects','ProjectController@projects')->name('api.projects');
+	Route::get('/filterProjects','ProjectController@filter')->name('api.projects.filter');
 	Route::get('/clientes','CustomersController@index')->name('api.customers');
 
 	Route::resource('users', 'UserController',['as' => 'api']);

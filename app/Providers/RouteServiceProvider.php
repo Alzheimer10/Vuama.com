@@ -75,7 +75,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapCustomerRoutes()
     {
         Route::group([
-            'middleware' => ['web', 'customer', 'auth:customer'],
+            'middleware' => ['web','customer', 'auth:customer'],
             'as' => 'customer.',
             'namespace' => $this->namespace,
         ], function ($router) {

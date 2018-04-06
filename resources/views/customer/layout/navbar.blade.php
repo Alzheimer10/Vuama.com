@@ -11,7 +11,7 @@
           <li class="nav-item"><a class="nav-link" href="{{ route('help') }}">Ayuda</a></li>
           @if(!Auth::guard('customer')->check())
             <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrar</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Login</a></li>
           @else
             <li class="nav-item"><a class="nav-link" href="{{ route('customer.directory') }}">Directorio</a></li>
             <li class="nav-item"><a class="nav-link btn-solicitar" href="{{ route('customer.solicit') }}">Solicitar</a></li>
@@ -23,10 +23,10 @@
               </a>
               <div role="menu" class="dropdown-menu">
                 <a href="{{ route('customer.my_account') }}" class="dropdown-item">Mi Perfil</a>
-                <a class="dropdown-item"  href="{{ route('logout') }}" class="dropdown-toggle"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <a class="dropdown-item"  href="{{ url('logout') }}" class="dropdown-toggle"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                    Salir
                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form>
               </div>

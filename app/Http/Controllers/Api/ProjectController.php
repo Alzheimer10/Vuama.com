@@ -14,7 +14,7 @@ class ProjectController extends Controller
      * 
      * @return \Illuminate\Http\JsonResponse
      */
-    public function projects(Request $request)
+    public function filter(Request $request)
     {
         $projects = Project::orderBy('created_at', 'desc');
 

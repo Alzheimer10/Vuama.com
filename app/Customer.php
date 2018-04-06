@@ -5,6 +5,8 @@ namespace App;
 use App\Notifications\CustomerResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Project;
+use App\Models\Bank_account;
 
 class Customer extends Authenticatable
 {
@@ -49,5 +51,10 @@ class Customer extends Authenticatable
     public function bank_accounts()
     {
         return $this->hasMany(bank_account::class);
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
     }
 }

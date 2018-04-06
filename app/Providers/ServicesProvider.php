@@ -14,10 +14,8 @@ class ServicesProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (Auth::guard('customer')->check()){
-            \View::share('count', 'avatars/');
-        }
-            \View::share('count', 'avatars/');
+        \View::share('ServicesProvider', \App\Models\Service::all()->where('status',1));
+
     }
 
     /**

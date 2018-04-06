@@ -1,68 +1,43 @@
 @extends('admin.layout.auth')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/login') }}">
-                        {{ csrf_field() }}
+    <div class="form-inner w-100">
+        <div class="logo text-uppercase">
+            <span><img src="{{ asset('img/blue-white.svg') }}" alt="logo_vuama"></span>
+            <strong class="text-primary" style="font-size: 1rem; width: 100%;display: block">Dashboard</strong>
+        </div>
+        <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/login') }}">
+            @csrf
+            @if ($errors->has('email'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
+            @if ($errors->has('password'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
+            @endif
+            <div class="form-group-material {{ $errors->has('email') ? ' has-error' : '' }}">
+                <input id="email" type="email" name="email" required class="input-material" value="{{ old('email') }}">
+                <label for="email" class="label-material @if( !empty(old('email'))  ) active @endif">email</label>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+            </div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ url('/admin/password/reset') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+            <div class="form-group-material mb-2 {{ $errors->has('password') ? ' has-error' : '' }}">
+                <input id="password" type="password" name="password" required class="input-material">
+                <label for="password" class="label-material" @if( !empty(old('password'))  ) active @endif>Password</label>
+            </div>
+            <div class="col-sm-12 mb-4 text-left">
+                <div class="i-checks">
+                    <input id="remember" type="checkbox"  {{ old('remember') ? 'checked' : '' }} class="form-control-custom">
+                    <label for="remember"> Recuerdame</label>
                 </div>
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary text-uppercase w-100 d-block">
+                Entrar
+            </button>
+          <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+        </form>
     </div>
-</div>
 @endsection
