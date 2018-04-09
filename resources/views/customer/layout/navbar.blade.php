@@ -10,7 +10,7 @@
           <li class="nav-item"><a class="nav-link" href="{{ route('howWork') }}">¿Cómo funciona?</a></li>
           <li class="nav-item"><a class="nav-link" href="{{ route('help') }}">Ayuda</a></li>
           @if(!Auth::guard('customer')->check())
-            <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Registrar</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url('register') }}">Registrar</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url('login') }}">Login</a></li>
           @else
             <li class="nav-item"><a class="nav-link" href="{{ route('customer.directory') }}">Directorio</a></li>
