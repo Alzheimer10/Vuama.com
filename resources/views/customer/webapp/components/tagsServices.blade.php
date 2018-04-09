@@ -1,5 +1,5 @@
 <ul class="tags">
-    @forelse($ServicesProvider as $service)
+    @forelse(\App\Models\Service::all()->where('status',1) as $service)
 		<li class="tag">
 			<a href="#"><span class="name">{{ $service->name }}</span>
 				<span class="extra">480</span>
