@@ -12,7 +12,7 @@ window.VueTruncate = require('vue-truncate-filter')
 Vue.use(VueTruncate)
 const queryString = require('query-string')
 Vue.use(VueRouteLaravel, {
-    baseroute: '/api/route/',
+    baseroute: document.head.querySelector("[name=baseroute]").content + '/api/route/',
     axios: axios,
     queryString: queryString,
     csrf_token: document.head.querySelector("[name=csrf-token]").content

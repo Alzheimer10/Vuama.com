@@ -48,6 +48,11 @@ class Customer extends Authenticatable
         $this->notify(new CustomerResetPassword($token));
     }
 
+    public function fullname()
+    {
+        return $this->name.' '. $this->lastname;
+    }
+    
     public function bank_accounts()
     {
         return $this->hasMany(bank_account::class);

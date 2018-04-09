@@ -49,7 +49,7 @@ Vue.component('pagination', require('laravel-vue-pagination'))
 Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('project-pagination-component', require('./components/project/PaginationProjectsComponent.vue'))
 Vue.component('customer-component', require('./components/customer/CustomerComponent.vue'))
-// Vue.component('avatar-component', require('./components/account/avatarComponent.vue'))
+Vue.component('pagination-directory-component', require('./components/directory/PaginationDirectory.vue'))
 
 var vm = new Vue({
 	el: '#app',

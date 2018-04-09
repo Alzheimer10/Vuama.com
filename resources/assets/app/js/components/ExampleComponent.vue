@@ -43,7 +43,8 @@
         mounted: function () {
         },
         created: function () {
-            this.$routeLaravel('api.services.select').get()
+            // this.$routeLaravel('api.services.select').get()
+            axios.get('api/servicios')
             .then(response => {
                 this.firstTabSchema.fields[0].values = response.data;
             })

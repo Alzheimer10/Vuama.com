@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Customer;
 
 class CustomersController extends Controller
 {
@@ -15,8 +15,8 @@ class CustomersController extends Controller
      */
     public function index(Request $request)
     {
-        $users = User::orderBy('created_at', 'desc');
-        return response()->json($users->paginate(1));
+        $users = Customer::orderBy('created_at', 'desc');
+        return response()->json($users->paginate(100));
     }
 
 }

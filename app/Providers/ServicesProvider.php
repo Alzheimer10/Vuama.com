@@ -14,7 +14,7 @@ class ServicesProvider extends ServiceProvider
      */
     public function boot()
     {
-        \View::share('ServicesProvider', \App\Models\Service::all()->where('status',1));
+        // \View::share('ServicesProvider', \App\Models\Service::all()->where('status',1));
 
     }
 

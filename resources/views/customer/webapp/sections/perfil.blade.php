@@ -29,10 +29,10 @@
         <div class="container">
             <div class="row align-items-center h-100 h-100">
                 <div class="col-3 pl-0 pr-0 mx-auto">                    
-                    <img src="{{ asset('avatars') }}/{{ $user->avatar }}" class="rounded-circle img-fluid">
+                    <img src="{{ asset($customer->avatar) }}" class="rounded-circle img-fluid">
                 </div>
                 <div class="col-9 mx-auto">
-                    <h1 class="mb-0 text-capitalize fullname">{{ $user->fullname() }}</h1>
+                    <h1 class="mb-0 text-capitalize fullname">{{ $customer->fullname() }}</h1>
                     <li class="list-inline-item">
                         <span class="badge badge-dark badge-pill">ARQUITECTO</span>
                     </li>
@@ -49,7 +49,7 @@
             <hr>
             <div class="row">
                 <h2 class="mb-0">Sobre mi</h2>
-                <p>{{ $user->description }}</p>
+                <p>{{ $customer->description }}</p>
             </div>
 
             <div class="row">

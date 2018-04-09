@@ -24,4 +24,13 @@ class CustomerController extends Controller
 	public function customer_type(){
 		return view('customer.auth.customertype');
 	}
+
+	/**
+	* @return View Blade
+	*/    
+	public function perfil($id){
+	    $customer = \App\Customer::findOrFail($id);
+	    return view($this->viewdir.'.sections.perfil')->with('customer', $customer);
+	}
+
 }

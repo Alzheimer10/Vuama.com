@@ -16,8 +16,8 @@
       <ul id="side-main-menu" class="side-menu list-unstyled">                  
         <li class="{{ Request::is('admin') ? 'active' : '' }}"><a href="{{ route('admin.home') }}"> <i class="fas fa-home"></i> Inicio</a></li>
         <li class="{{ Request::is('admin/servicios*') ? 'active' : '' }}"><a href="{{ route('admin.services') }}"> <i class="fas fa-list"></i> Servicios</a></li>
-
-        <li class="{{ Request::is('admin/clientes') ? 'active' : '' }}">
+        <li class="{{ Request::is('admin/projects*') ? 'active' : '' }}"><a href="{{ route('admin.projects') }}"> <i class="fas fa-list"></i> Proyectos</a></li>
+        <li class="{{ Request::is('admin/clientes*') ? 'active' : '' }}">
           <a href="#CustomersDropdown" aria-expanded="false" data-toggle="collapse" class="collapsed">
             <i class="fas fa-users"></i> Clientes
           </a>

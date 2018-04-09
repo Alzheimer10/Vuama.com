@@ -41,8 +41,8 @@
 
 <script>
 	import axios from 'axios';
-	import projectCardComponent from './projectCardComponent.vue';
-	import projectDatapickerComponent from './ProjectDatapickerComponent.vue';
+	import projectCardComponent from '../project/projectCardComponent.vue';
+	import projectDatapickerComponent from '../project/ProjectDatapickerComponent.vue';
     export default {
     	components: {
     	    'project-card-component' : projectCardComponent,
@@ -54,15 +54,12 @@
 				laravelData: {},
         		dataPicker: [],
         		types: ['Mañana', 'Tarde'],
-        		listTypes: ['Mañana', 'Tarde'],
-        		urlProject:''
+        		listTypes: ['Mañana', 'Tarde']
 			}
 		},
 		created() {
 			this.dataPicker  = [];
 			this.getLaravelData();
-    		this.$routeLaravel('customer.project.show').url().then(response => this.urlProject = response)
-    		console.log(this.urlProject);
 		},
 		methods: {
 			reset(){

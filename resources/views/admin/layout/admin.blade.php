@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="baseroutecv" content="http://localhost/trabajos/Vuama.com/public/">
     <script> window.Laravel = { csrfToken: '{{ csrf_token() }}' } </script>
 
     @yield('styles')

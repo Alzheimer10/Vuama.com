@@ -35,7 +35,8 @@
         },
         methods: {
             serviceDelete(id){
-                this.$routeLaravel('api.services.destroy',{id}).post()
+                // this.$routeLaravel('api.services.destroy',{id}).post()
+                axios.post('../api/servicios/',{id})
                 .then(response => {
                     if(response.status==200){
                         this.$message({  message: 'El serivicio se elimino',  showClose: true,  type: 'success'});

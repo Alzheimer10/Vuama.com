@@ -54,7 +54,8 @@
         },
         methods: {
             getLaravelData() {
-              this.$routeLaravel('api.services.index',{status:0}).get()
+              // this.$routeLaravel('api.services.index').get()
+              axios.get('../api/servicios')
               .then(response => {
                 this.laravelData = response;
                 this.loading = false;

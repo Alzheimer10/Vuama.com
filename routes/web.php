@@ -10,6 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/** 
+ *  Note: middleware optional 
+ */
+Route::get('/api/route/{name}', 'RouteController@index'); 
+
 Route::namespace('CustomerWeb')->group(function () {
   Route::group(['middleware' => 'is.customer'], function(){
     Route::get('/','AppController@home')->name('home');

@@ -86,7 +86,7 @@
 					</h3>
 					<p>{{ $project->description }}</p>
 					<h3 class="mb-0 w-100"><strong>Acerca del empleador</strong></h3>
-					<p class="mb-0 w-100"><a href="{{ route('perfil', $project->user->id) }}">{{ $project->user->fullname() }}</a></p>
+					<p class="mb-0 w-100"><a href="">{{ $project->customer->fullname() }}</a></p>
 					<p class="mb-0 w-100"><strong>Proyectos publicados:</strong> 5</p>
 					<p>
 						<i class="fa fa-star"></i>

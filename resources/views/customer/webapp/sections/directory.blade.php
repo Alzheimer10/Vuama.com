@@ -12,7 +12,7 @@
         }
         .jumbotron-header{
             background: #355c7d;
-            background: /* gradient overlay */ linear-gradient( to left, rgba(229, 84, 51, 0.72), /* #171616 */ rgba(74, 59, 67, 0.61) /* #4a3b44 */ ), /* bottom image */ url(https://cdn.stocksnap.io/img-thumbs/960w/VPYPAS4FVT.jpg) no-repeat left top;
+            background: /* gradient overlay */ linear-gradient( to left, rgba(75, 63, 74, 0.66), /* #171616 */ rgba(35, 26, 33, 0.32) /* #4a3b44 */ ), /* bottom image */ url(img/call-to-action-bg.jpg) no-repeat center center;
             background-size: cover;
             z-index: 0;
             border-radius: 0px;
@@ -48,7 +48,8 @@
             <div class="row">
                 <div class="col-xs-12 col-md-8">
                     <div class="row">
-{{--                         @forelse ($users as $user)
+                        {{-- <pagination-directory-component><pagination-directory-component> --}}
+                         @forelse (\App\Customer::all() as $user)
                             <div class="col-xs-6 col-md-4 col-lg-6 mb-5">
                                 <div class="row border-bottom">
                                     <div class="car-img col-3">
@@ -57,7 +58,7 @@
                                         </a>
                                     </div>
                                     <div class="col-9">
-                                        <h1 class="mb-0" style="font-size: 100%"><a href="{{ route('perfil', $user->id) }}">{{$user->fullname()}}</a></h1>
+                                        <h1 class="mb-0" style="font-size: 100%"><a href="{{ route('customer.perfil', $user->id) }}">{{$user->fullname()}}</a></h1>
                                         <ul class="list-inline mb-0">
                                             <li class="list-inline-item">
                                                 <span class="badge badge-dark badge-pill">ARQUITECTO</span>
@@ -74,7 +75,7 @@
                                 </div>
                             </div>
                         @empty
-                        @endforelse --}}
+                        @endforelse
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-4">
@@ -93,16 +94,7 @@
 
                     <hr>
                     <div class="row ml-1">              
-                        <ul class="tags">
-{{--                             @forelse($services as $service)
-                                <li class="tag">
-                                    <a href="#"><span class="name">{{ $service->name }}</span>
-                                        <span class="extra">480</span>
-                                    </a>
-                                </li>
-                            @empty
-                            @endforelse --}}
-                        </ul>
+                        @component('customer.webapp.components.tagsServices')@endcomponent
                     </div>
                     <hr>
                 </div>
