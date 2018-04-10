@@ -84406,7 +84406,6 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_2_vue_form_generator___default.a);
         onComplete: function onComplete() {
             var _this2 = this;
 
-            console.log(this.model);
             this.model.service_id = this.model.service_id.id;
             __WEBPACK_IMPORTED_MODULE_3_axios___default.a.post('api/projects/store', this.model).then(function (response) {
                 _this2.user = response.data;

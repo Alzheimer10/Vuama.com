@@ -179,7 +179,6 @@
         },
         methods: {
             onComplete: function(){
-                console.log(this.model);
                 this.model.service_id =  this.model.service_id.id;
                 axios.post('api/projects/store',this.model)
                 .then(response => {
