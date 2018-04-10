@@ -12,7 +12,7 @@
 				</div>
 				<div class="col pr-2">
 					<h3 class="text-uppercase mb-0 tippy" :title="project.title">
-						<a :href="'proyecto/' + project.id"><strong>{{ project.title | truncate(100) }}</strong></a>
+						<a :href="'proyecto/' + project.slug"><strong>{{ project.title | truncate(100) }}</strong></a>
 					</h3>
 				</div>
 			</div>

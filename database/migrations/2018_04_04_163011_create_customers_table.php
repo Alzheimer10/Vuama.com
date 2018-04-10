@@ -19,10 +19,11 @@ class CreateCustomersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->longText('description')->nullable();
-            $table->enum('gender', ['M', 'F', 'N/D'])->nullable()->default('N/D');
+            $table->enum('gender', ['M', 'F', 'N/D'])->default('N/D');
             $table->string('avatar')->default("avatars/default_avatar.png");
             $table->unsignedInteger('status')->default(1);
             $table->boolean('confirmed')->default(false);
+            $table->string('slug')->unique();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -32,10 +32,10 @@
             display: none !important;
         }
         body{
-             background-image: url({{ asset('img/34081398421_9225e56f8c_b.jpg') }});
-             background-size: cover;
-             background-position: center;
-             background-repeat: no-repeat;
+         background-image: url({{ asset('img/34081398421_9225e56f8c_b.jpg') }});
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
         }
         input.form-control{
             padding: .8rem !important;

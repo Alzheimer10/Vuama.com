@@ -21,6 +21,7 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->boolean('status')->default(true);
+            $table->string('slug')->unique();
             $table->timestamps();
             $table->unsignedInteger('customer_id');
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');

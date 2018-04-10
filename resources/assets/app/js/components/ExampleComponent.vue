@@ -181,7 +181,7 @@
             onComplete: function(){
                 console.log(this.model);
                 this.model.service_id =  this.model.service_id.id;
-                this.$routeLaravel('api.projects.create').post(this.model)
+                axios.post('api/projects/store',this.model)
                 .then(response => {
                     this.user = response.data
                     this.loading = false

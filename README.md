@@ -32,4 +32,5 @@ php artisan migrate --seed
 ## Vendors
 - Kbwebs/MultiAuth [Multi auth para Laravel]
 - spatie/laravel-permission [Asociar usuarios con permisos y roles]
+- Eloquent-Sluggable [Fácil creación de slug para tus modelos Eloquent en Laravel.]
 

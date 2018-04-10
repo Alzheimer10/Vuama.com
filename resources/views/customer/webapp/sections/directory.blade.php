@@ -53,12 +53,14 @@
                             <div class="col-xs-6 col-md-4 col-lg-6 mb-5">
                                 <div class="row border-bottom">
                                     <div class="car-img col-3">
-                                        <a href="#">
+                                        <a href="{{ route('customer.perfil', $user->slug) }}">
                                             <img class="rounded-circle" src="{{ asset('avatars/default_avatar.png') }}" alt="perfil" width="100%">
                                         </a>
                                     </div>
                                     <div class="col-9">
-                                        <h1 class="mb-0" style="font-size: 100%"><a href="{{ route('customer.perfil', $user->id) }}">{{$user->fullname()}}</a></h1>
+                                        <h1 class="mb-0" style="font-size: 100%">
+                                            <a href="{{ route('customer.perfil', $user->slug) }}">{{$user->fullname()}}</a>
+                                        </h1>
                                         <ul class="list-inline mb-0">
                                             <li class="list-inline-item">
                                                 <span class="badge badge-dark badge-pill">ARQUITECTO</span>

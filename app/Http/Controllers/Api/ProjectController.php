@@ -10,6 +10,16 @@ class ProjectController extends Controller
 {
 
     /**
+     * Store of Projects
+     * 
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function store(Request $request)
+    {
+        return response()->json('sd');
+    }
+
+    /**
      * return paginated records of Projects
      * 
      * @return \Illuminate\Http\JsonResponse

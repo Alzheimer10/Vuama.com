@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\CustomerWeb;
 
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use \App\Customer;
 
 class CustomerController extends Controller
 {
@@ -28,8 +31,8 @@ class CustomerController extends Controller
 	/**
 	* @return View Blade
 	*/    
-	public function perfil($id){
-	    $customer = \App\Customer::findOrFail($id);
+	public function perfil($slugString){
+	    $customer = Customer::findBySlugOrFail($slugString);
 	    return view($this->viewdir.'.sections.perfil')->with('customer', $customer);
 	}
 

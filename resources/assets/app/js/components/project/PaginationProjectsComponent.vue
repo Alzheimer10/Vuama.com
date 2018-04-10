@@ -61,8 +61,6 @@
 		created() {
 			this.dataPicker  = [];
 			this.getLaravelData();
-    		this.$routeLaravel('customer.project.show').url().then(response => this.urlProject = response)
-    		console.log(this.urlProject);
 		},
 		methods: {
 			reset(){
@@ -70,7 +68,7 @@
 				this.getLaravelData();
 			},
 			filtar(){
-	            axios.get(this.route+'?page=1' + '&types='+this.types+ '&dataPicker='+this.dataPicker)
+	            axios.get('api/filterProjects?page=1' + '&types='+this.types+ '&dataPicker='+this.dataPicker)
 	            .then(response => {
 	                this.laravelData = response.data;
 	            	console.log(this.laravelData.data);
@@ -80,8 +78,9 @@
 				if (typeof page === 'undefined') {
 					page = 1;
 				}
-	            axios.get(this.route+'?page=' + page)
+	            axios.get('api/filterProjects?page=' + page)
 	            .then(response => {
+	            	console.log(response.data)
 	                this.laravelData = response.data;
 	            });
 			}

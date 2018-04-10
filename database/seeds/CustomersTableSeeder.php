@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Customer;
-
+use Illuminate\Support\Facades\Crypt;
 class CustomersTableSeeder extends Seeder
 {
     /**

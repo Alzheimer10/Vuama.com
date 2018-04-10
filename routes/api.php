@@ -18,8 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'Api'], function(){
+
+	Route::post('/projects/store','ProjectController@store')->name('api.projects.create');
+
 	Route::get('/filterProjects','ProjectController@filter')->name('api.projects.filter');
 	Route::get('/clientes','CustomersController@index')->name('api.customers');
+
+	// Route::get('',)->name('customer.project.show');
 
 	Route::resource('users', 'UserController',['as' => 'api']);
 	Route::get('servicios','ServiceController@index')->name('api.services.index');

@@ -10,7 +10,7 @@
 <div class="container-fluid">
 	<!-- END PAGE HEADER-->	
 	<section class="container">
-		<example-component v-bind:user_id="1"></example-component>
+		<example-component v-bind:user_id="{{ Auth::guard('customer')->user()->id }}"></example-component>
 	</section>
 </div>
 

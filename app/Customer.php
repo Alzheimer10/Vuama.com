@@ -5,13 +5,15 @@ namespace App;
 use App\Notifications\CustomerResetPassword;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use App\Models\Project;
 use App\Models\Bank_account;
 
 class Customer extends Authenticatable
 {
-    use Notifiable;
-
+    use Notifiable, Sluggable;
+    use SluggableScopeHelpers;
     /**
      * The attributes that are mass assignable.
      *
@@ -25,6 +27,7 @@ class Customer extends Authenticatable
         'description',
         'avatar',
         'status',
+        'slug',
         'gender'
     ];
 
@@ -46,6 +49,20 @@ class Customer extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CustomerResetPassword($token));
+    }
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => ['name','lastname']
+            ]
+        ];
     }
 
     public function fullname()
