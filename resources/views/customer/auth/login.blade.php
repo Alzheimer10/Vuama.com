@@ -54,7 +54,7 @@
                             <a class="btn btn-link mb-0" href="{{ url('/password/reset') }}">
                                 Forgot Your Password?
                             </a>
-                            <a class="btn btn-link float-right" href="{{ route('register') }}">
+                            <a class="btn btn-link float-right" href="{{ url('register') }}">
                                 Registrarse
                             </a>
                         </div>

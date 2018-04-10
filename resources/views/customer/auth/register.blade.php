@@ -75,7 +75,7 @@
                             <button type="submit" class="btn btn-app d-block w-100 p-3">
                                 COMENZAR!
                             </button>
-                            <a class="btn btn-link" href="{{ route('login') }}">
+                            <a class="btn btn-link" href="{{ url('login') }}">
                                 Poseo una cuenta
                             </a>
                         </div>
